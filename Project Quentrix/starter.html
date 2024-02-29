@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/QUENTRIX.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/starter.css">
+    <title>Payment</title>
+</head>
+
+<body>
+    <section class="payhead">
+        <h1>Complete your purchase to get access to the Starter Pack</h1>
+    </section>
+    <section class="payform">
+        <form action="#" class="form" id="paymentForm" onsubmit="submitForm(event)">
+            <p class="first">
+                <label for="firstName">Firstname:</label>
+                <input type="text" name="firstName" id="firstName" placeholder="John" required>
+            </p>
+            <p class="second">
+                <label for="secondName">Secondname:</label>
+                <input type="text" name="secondName" id="secondName" placeholder="Doe" required>
+            </p>
+            <p class="country">
+                <label for="country">Country:</label>
+                <input type="text" name="country" id="country" placeholder="USA" required>
+            </p>
+            <p class="number">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="+234913842084" required>
+            </p>
+            <p class="plan">
+                <label for="paymentPlan">Payment Plan:</label>
+                <input type="text" name="paymentPlan" id="paymentPlan" value="Starter Pack" class="plan" readonly>
+            </p>
+            <p class="Method">
+                <label for="paymentMethod">Payment Method:</label>
+                <select name="paymentMethod" id="paymentMethod" required>
+                    <option value="" disabled selected>Select Payment Method</option>
+                    <option value="creditCard">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="stripe">Stripe</option>w
+                </select>
+            </p>
+            <div class="button"><button type="submit">Submit</button></div>
+           
+        </form>
+    </section>
+    
+</body>
+<script src="/js/starter.js"></script>
+</html>
+

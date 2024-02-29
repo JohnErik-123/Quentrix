@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/QUENTRIX.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/Wisdom.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>LOGIN FORM</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="min-container">
+            <div class="head">
+                <nav class="arrow">
+                    <a href="/home.html" class="arrow"><i class='bx bx-arrow-back'></i></a>
+                </nav>
+                <div class="sign-in">
+                    <h1>Sign In</h1>
+                </div>
+            </div>
+            <div class="form">
+                <form id="loginForm" onsubmit="submitForm(event)">
+                    <p>
+                        <label for="" class="word">User Name</label>
+                        <input type="text" placeholder="Name" required class="input" id="username">
+                    </p>
+                    <p>
+                        <label for="" class="word">Email</label>
+                        <input type="email" placeholder="Email" required class="input" id="email">
+                    </p>
+                    <p>
+                        <label for="" class="word">Password</label>
+                        <input type="password" placeholder="Password" required class="inputpass" id="password">
+                    </p>
+                    <div class="signup">
+                        <p>Don't have an account</p>
+                        <button><a href="#">Sign Up</a></button>
+                    </div>
+                    <p class="log-button">
+                        <button type="submit"><a href="#"></a></button>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+
+            // Get values from the form
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            // Validate input types
+            if (!isValidInputType('text', username) || !isValidInputType('email', email) || !isValidInputType('password', password)) {
+                alert("Invalid input types. Please check your inputs.");
+                return;
+            }
+
+            // Here, you can perform any other client-side logic or redirect to another page
+            alert("Login successful! Redirecting...");
+
+            // Redirect to welcome page (replace with your actual page)
+            window.location.href = "./main.html/welcome.html";
+        }
+
+        function isValidInputType(type, value) {
+            // Check if the input type matches the expected type
+            if (type === 'text' && typeof value === 'string') {
+                return true;
+            } else if (type === 'email' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+                return true;
+            } else if (type === 'password' && typeof value === 'string') {
+                return true;
+            }
+            return false;
+        }
+    </script>
+</body>
+
+</html>
